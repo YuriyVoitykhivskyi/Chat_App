@@ -4,7 +4,7 @@ import './Title.css';
 const Title = () =>{
 return (
 <div  className="title">
-    Real Time Chat App
+    Chat App
 </div>
 )
 }

@@ -1,19 +1,16 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import './MessagesList.css';
 import SendMessageForm from "../SendMessageForm/SendMessageForm";
 
 
-const MessagesList = () =>{
-    console.log();
+const MessagesList = ({messagesArray, setMessagesArray}) =>{
+    
 return (
     <div className="messageList">
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            {messagesArray.map( (currentV,index) =>
+                <li className="messageStyle" key={index}>{currentV}</li>
+            )}
         </ul>
     </div>
 )
