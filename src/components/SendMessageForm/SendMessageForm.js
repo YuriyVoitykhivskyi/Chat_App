@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import * as React from "react";
 import './SendMessageForm.css';
 import SendIcon from '@mui/icons-material/Send';
 
 
-const SendMessageForm = () =>{
-    const [messagesArray, setMessagesArray]=useState([]);
-    const [messageData, setMessageData] = useState('');
-
+const SendMessageForm = ({messagesArray, messageData,setMessageData}) =>{
     
 
     const handleChange = (event) =>{
@@ -20,7 +17,7 @@ const SendMessageForm = () =>{
 return (
     <div  className="sendMessageList">
             <input className='inputField' id="message" name="message" type="text"  onChange={handleChange}></input>
-            <button className='buttonField' onClick={handleClick} ><SendIcon/></button>
+            <button className='buttonField'  onClick={handleClick}><SendIcon/></button>
     </div>
 )
 }
